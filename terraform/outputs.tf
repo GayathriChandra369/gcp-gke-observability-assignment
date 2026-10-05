@@ -28,27 +28,27 @@ output "secondary_subnet_name" {
   value       = google_compute_subnetwork.secondary_subnet.name
 }
 
-#output "primary_cluster_name" {
-#  description = "Primary GKE cluster name"
-#  value       = google_container_cluster.primary.name
-#}
+output "primary_cluster_name" {
+  description = "Primary GKE cluster name"
+  value       = google_container_cluster.primary.name
+}
 
-#output "secondary_cluster_name" {
-#  description = "Secondary GKE cluster name"
-#  value       = google_container_cluster.secondary.name
-#}
+output "secondary_cluster_name" {
+  description = "Secondary GKE cluster name"
+  value       = google_container_cluster.secondary.name
+}
 
-#output "primary_cluster_endpoint" {
-#  description = "Primary GKE cluster endpoint"
-#  value       = google_container_cluster.primary.endpoint
-#  sensitive   = true
-#}
+output "primary_cluster_endpoint" {
+  description = "Primary GKE cluster endpoint"
+  value       = google_container_cluster.primary.endpoint
+  sensitive   = true
+}
 
-#output "secondary_cluster_endpoint" {
-#  description = "Secondary GKE cluster endpoint"
-#  value       = google_container_cluster.secondary.endpoint
-#  sensitive   = true
-#}
+output "secondary_cluster_endpoint" {
+  description = "Secondary GKE cluster endpoint"
+  value       = google_container_cluster.secondary.endpoint
+  sensitive   = true
+}
 
 #output "artifact_registry_repository" {
 #  description = "Artifact Registry repository URL"
