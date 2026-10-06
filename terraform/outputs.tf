@@ -50,7 +50,17 @@ output "secondary_cluster_endpoint" {
   sensitive   = true
 }
 
-#output "artifact_registry_repository" {
-#  description = "Artifact Registry repository URL"
-#  value       = "${var.primary_region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.main.repository_id}"
-#}
+output "artifact_registry_repository" {
+  description = "Artifact Registry repository URL"
+  value       = "${var.primary_region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.main.repository_id}"
+}
+
+output "artifact_registry_url" {
+  description = "Docker image base URL"
+  value       = "${var.primary_region}-docker.pkg.dev/${var.project_id}/gke-apps"
+}
+
+output "bigquery_dataset_id" {
+  description = "BigQuery dataset for GKE logs"
+  value       = google_bigquery_dataset.logs.dataset_id
+}
